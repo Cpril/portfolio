@@ -1,5 +1,5 @@
 # Priscilla Portfolio 🔥
-> https://Cpirl.github.io/portfolio
+> https://Cpril.github.io/portfolio
 
 Contact me at: jc253@calvin.edu;
 
