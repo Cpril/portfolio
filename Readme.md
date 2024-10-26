@@ -1,32 +1,16 @@
-# Priscilla Portfolio 🔥
+# Priscilla's Portfolio 🔥
 > https://Cpril.github.io/portfolio
 
 Contact me at: jc253@calvin.edu;
 
-
-### Website Preview
-#### Home Page
-
-
-#### About Page
-
-
-
-#### Projects Page
-
-  
-
-
-## Sections 📚
+## Table of Content:
 ✔️ About\
 ✔️ Interests\
 ✔️ Education\
 ✔️ Awards\
 ✔️ Experience\
 ✔️ Projects \
-✔️ Skills \
 ✔️ Resume\
-✔️ Contact Info
 
 
 Template adapted from https://github.com/rajaprerak/rajaprerak.github.io
