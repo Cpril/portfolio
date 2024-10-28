@@ -10,7 +10,7 @@ Contact me at: jc253@calvin.edu;
 ✔️ Awards & Certificate\
 ✔️ Experience\
 ✔️ Projects & Research\
-✔️ Resume\
+✔️ Resume
 
 
 Template adapted from https://github.com/rajaprerak/rajaprerak.github.io
