@@ -1,0 +1,12 @@
+---
+title: "Plaster Creek Contaminants Analysis"
+format: html
+editor: visual
+---
+
+In collaboration with plaster creek research student, we worked on using statistical modeling to analyze the effects of rain gardens on soil contaminants.
+
+We modeled Chloride, Iron, and Zinc as a function of age of the rain garden, soil contaminants level in percentage, pH, and interaction of rain garden age and pH. Phosphate and Chloride were modeled using a gamma distribution with a log link function while Iron and Zinc were modeled using a binomial distribution with logit link function. A random effect of sample nested in sites is included. All models are fitted using R statistics in R studio. 
+
+Because this project is in collaboration with a research project that's ongoing publication, the workbook is not shown here. 
+
