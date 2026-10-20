@@ -1,0 +1,10 @@
+{
+  "type": "project",
+  "title": "Modeling the USD/CNY exchange rate",
+  "number": "04",
+  "category": "Bayesian statistics · Jan. – May 2025",
+  "result": "MCMC & uncertainty",
+  "todo": "Add a repository, held-out evaluation, and a concise explanation of the key findings.",
+  "image": "Bayes.png",
+  "imageAlt": "Preview of Modeling the USD/CNY exchange rate"
+}

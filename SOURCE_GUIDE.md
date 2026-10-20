@@ -1,60 +1,86 @@
 # Editing the portfolio
 
-Edit `src/`, then compile it with:
+Each project, research entry, and experience has a folder under `src/content/` containing its text and pictures:
+
+```text
+src/content/projects/course-advisor/
+  entry.json             Title, category, result, optional cover image
+  description.md         The text you write
+  course_advisor.png     Picture belonging to this project
+```
+
+Research lives in `src/content/research/`, experience in `src/content/experience/`, and earlier projects in `src/content/projects/archive/`. The older shared images remain in `assets/` for compatibility with existing reports; the homepage entries use their colocated copies.
+
+## Write descriptions in Markdown
+
+For example, edit `description.md`:
+
+```markdown
+### Motivation
+I wanted to help students find courses that fit their interests.
+
+### My contribution
+I built **tool calling** and a queryable catalog, with *multilingual* support.
+
+- Explain an important technical choice.
+- Describe the evaluation and its limitations.
+
+### Results
+Summarize what you measured or learned.
+
+![An example conversation](course_advisor.png)
+
+[View code](https://github.com/Cpril/course_advisor_bot_2)
+```
+
+Markdown supports headings, bold, italic, lists, quotes, links, images, code blocks, and tables. Raw HTML is also supported when needed. Image and file links are relative to the Markdown file’s folder; the compiler rewrites them for the generated homepage. Keep homepage descriptions brief, since all this text appears in its card.
+
+If a project has no public link, simply omit it. Add only information and findings you are allowed to share. Images are optional; put new pictures beside `description.md` and reference them there. To display a cover image, set `image` and `imageAlt` in `entry.json`. Avoid referencing the same image in both places unless you want it displayed twice.
+
+## Metadata and order
+
+`entry.json` controls the card’s title, dates, type, and other short labels. Keep valid JSON: double quotes and no trailing commas. The optional `todo` field displays a visible “To add” reminder; remove it when complete.
+
+Section layout and order remain in `src/sections/<section>/index.html`. An entry is included with:
+
+```html
+<!-- include: content/projects/course-advisor/entry.json -->
+```
+
+Move the include to reorder entries. Remove it to hide an entry without deleting its files. To add a new entry, copy a similar folder, edit its metadata and Markdown, then add its include. New folders are not included automatically.
+
+## Build and check
+
+Install the pinned Markdown compiler once after cloning:
+
+```sh
+npm ci
+```
+
+After editing:
 
 ```sh
 npm run build
-```
-
-Only Node.js is required. There are no dependencies to install. On Windows, you can use `node scripts/build.mjs` directly if PowerShell blocks npm.
-
-The build writes the root `index.html`. Do not edit that generated file directly: your changes would be overwritten. Commit it together with your source changes so GitHub Pages continues serving the repository without a custom deployment workflow.
-
-## Where to edit
-
-| File or folder | Content |
-| --- | --- |
-| `src/index.html` | Page shell, metadata, and section order |
-| `src/partials/header.html` | Brand and navigation |
-| `src/partials/footer.html` | Footer |
-| `src/sections/hero/index.html` | Introduction and portrait |
-| `src/sections/highlights.html` | Achievement summary |
-| `src/sections/research/` | Section layout and one file per research entry |
-| `src/sections/projects/` | Section layout, featured projects, and archive cards |
-| `src/sections/experience/` | Section layout, individual roles, and earlier experience |
-| `src/sections/about/index.html` | Biography, education, and awards |
-| `src/sections/skills/index.html` | Skills |
-| `src/sections/contact/index.html` | Contact links |
-| `assets/css/portfolio.css` | Shared styles |
-| `assets/Resume_JiaXinChen.pdf` | Downloadable resume |
-| `projects/` | Existing standalone project reports |
-
-Each section’s `index.html` controls its internal layout and entry order.
-
-## Add or reorder an entry
-
-1. Copy a similar entry into a new file, such as `src/sections/experience/new-role.html`.
-2. Edit its text and links.
-3. Add an include in `src/sections/experience/index.html` where it should appear:
-
-```html
-<!-- include: sections/experience/new-role.html -->
-```
-
-4. Run the build.
-
-Includes are relative to `src/`, support nesting, and appear in exactly the order written. Files are included only when referenced. Move an include to reorder content, or remove the include to hide it.
-
-Asset URLs are relative to the generated root homepage: use `assets/...` and `projects/...`, without extra `../` prefixes.
-
-To add an entire section, create its file and include it from `src/index.html`; add its anchor to `src/partials/header.html` if it belongs in navigation.
-
-## Check the output
-
-```sh
 npm run check
 ```
 
-Or run `node scripts/build.mjs --check`. This verifies that the generated homepage matches the source. Missing files, circular includes, and includes outside `src/` fail the build. The output is written only after all includes resolve successfully.
+On Windows, use `npm.cmd` if PowerShell blocks `npm.ps1`. After dependencies are installed, you can also run `node scripts/build.mjs` directly.
 
-Search `src/` for `To add` to find unfinished content. See [PORTFOLIO_NOTES.md](PORTFOLIO_NOTES.md) for content suggestions.
+The generated root `index.html` continues to work with GitHub Pages. Commit it along with source changes and colocated pictures. Do not edit it directly; rebuilding overwrites it. The build checks missing cover images, missing includes, and circular includes. The check command verifies that output matches source.
+
+## Other sections
+
+| Location | Purpose |
+| --- | --- |
+| `src/index.html` | Page metadata and section order |
+| `src/partials/` | Header, navigation, footer |
+| `src/sections/hero/` | Introduction and portrait layout |
+| `src/sections/about/` | Biography, education, awards |
+| `src/sections/skills/` | Skills |
+| `src/sections/contact/` | Contact links |
+| `assets/css/portfolio.css` | Shared styling |
+| `projects/` | Existing standalone project reports |
+
+Other sections can also include Markdown files using `<!-- include: sections/about/description.md -->`. Include paths are always relative to `src/`; asset links inside Markdown are relative to that Markdown file.
+
+Search `src/content/` for `todo` to find unfinished entry details. See PORTFOLIO_NOTES.md for content suggestions.

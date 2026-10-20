@@ -1,0 +1,9 @@
+{
+  "type": "research",
+  "title": "Conflict-resolved LoRA merging",
+  "date": "May 2026 – Present",
+  "subtitle": "Copyright-aware LLM updates",
+  "advisor": "With Prof. Xiangyu Zhao · City University of Hong Kong",
+  "status": "Preparing for submission to ACL 2027",
+  "todo": "Add a public code repository, benchmark setup, baseline definitions, and a research summary."
+}

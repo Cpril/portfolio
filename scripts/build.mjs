@@ -1,16 +1,44 @@
-import { readFile, writeFile } from 'node:fs/promises';
+import { readFile, writeFile, access } from 'node:fs/promises';
 import { dirname, resolve, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { marked } from 'marked';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const source = resolve(root, 'src');
 const include = /<!--\s*include:\s*([^\s]+)\s*-->/g;
+const escape = value => String(value ?? '').replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
+
+function markdown(text, folder) {
+  return marked.parse(text, { walkTokens(token) {
+    if (!['link', 'image'].includes(token.type)) return;
+    if (/^(https?:|mailto:|#|\/)/.test(token.href)) return;
+    const target = resolve(folder, decodeURIComponent(token.href));
+    if (!target.startsWith(root + sep)) throw new Error(`Asset outside repository: ${token.href}`);
+    token.href = relative(root, target).split(sep).map(encodeURIComponent).join('/');
+  }});
+}
+
+async function renderEntry(path) {
+  const folder = dirname(path);
+  const data = JSON.parse(await readFile(path, 'utf8'));
+  if (data.image) await access(resolve(folder, data.image));
+  const body = markdown(await readFile(resolve(folder, 'description.md'), 'utf8'), folder);
+  const todo = data.todo ? `<p class="placeholder"><strong>To add</strong> ${escape(data.todo)}</p>` : '';
+  const image = data.image ? `<img class="entry-image" loading="lazy" src="${escape(relative(root, resolve(folder, data.image)).split(sep).map(encodeURIComponent).join('/'))}" alt="${escape(data.imageAlt || data.title)}">` : '';
+  if (data.type === 'research') return `<article class="research-row"><div><p class="meta">${escape(data.date)}</p><h3>${escape(data.title)}</h3><p class="subtitle">${escape(data.subtitle)}</p><p class="meta">${escape(data.advisor)}</p></div><div class="entry-body">${image}${body}<span class="status">${escape(data.status)}</span>${todo}</div></article>`;
+  if (data.type === 'experience') return `<article><p class="meta">${escape(data.date)}</p><div class="entry-body"><h3>${escape(data.title)}</h3><p class="subtitle">${escape(data.subtitle)}</p>${image}${body}${todo}</div></article>`;
+  if (data.type === 'archive') return `<article>${image}<div class="entry-body">${body}</div></article>`;
+  if (data.type === 'project') return `<article class="project-card"><div class="project-top"><span>${escape(data.number)}</span><span>${escape(data.category)}</span></div><h3>${escape(data.title)}</h3><p class="result">${escape(data.result)}</p>${image}<div class="entry-body">${body}</div>${todo}</article>`;
+  throw new Error(`Unknown entry type in ${path}: ${data.type}`);
+}
 
 async function render(file, parents = []) {
   const path = resolve(source, file);
   if (!path.startsWith(source + sep)) throw new Error(`Include outside src: ${file}`);
   if (parents.includes(path)) throw new Error(`Circular include: ${[...parents, path].map(p => relative(source, p)).join(' -> ')}`);
+  if (path.endsWith('/entry.json') || path.endsWith('\\entry.json')) return renderEntry(path);
   const input = await readFile(path, 'utf8');
+  if (path.endsWith('.md')) return markdown(input, dirname(path));
   const parts = [];
   let end = 0;
   for (const match of input.matchAll(include)) {

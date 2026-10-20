@@ -1,0 +1,1 @@
+Co-developed a studio that turns children’s drawings into animations, interactive 3D models, and narrated storybooks. Integrated 13 modular AI skills on NVIDIA DGX Spark; reduced checked conversational response latency from 40–80 seconds to 2–8 seconds.

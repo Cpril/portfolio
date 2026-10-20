@@ -1,0 +1,9 @@
+{
+  "type": "research",
+  "title": "FATHOM",
+  "date": "Sept. 2025 – Apr. 2026",
+  "subtitle": "Throughput modeling for internet speed tests",
+  "advisor": "With Prof. Rocky Chang · Calvin University",
+  "status": "Under review at ACM SIGMETRICS · 2026",
+  "todo": "Add an approved preprint, repository, and a figure explaining the main findings."
+}
