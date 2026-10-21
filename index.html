@@ -33,11 +33,12 @@
                 </div>
             </div>
         </section>
-        <div class="highlights wrap" aria-label="Selected achievements">
-            <div><strong>10 / 218</strong><span>Chest X-ray competition rank</span></div>
-            <div><strong>13 groups</strong><span>Supported through data consulting</span></div>
+        <div class="highlights wrap" aria-label="At a glance">
+            <div><strong>Strong foundations</strong><span>Statistics, machine learning &amp; programming</span></div>
+            <div><strong>Driven &amp; collaborative</strong><span>Curiosity, initiative &amp; teamwork</span></div>
             <div><strong>3.97 / 4.00</strong><span>GPA · with Honors</span></div>
         </div>
+
         <section id="research" class="wrap section">
             <div class="section-heading">
                 <p class="eyebrow">01 / RESEARCH</p>
@@ -46,20 +47,25 @@
             </div>
             <div class="research-list">
                 <article class="research-row"><div><p class="meta">May 2026 – Present</p><h3>Conflict-resolved LoRA merging</h3><p class="subtitle">Copyright-aware LLM updates</p><p class="meta">With Prof. Xiangyu Zhao · City University of Hong Kong</p></div><div class="entry-body"><img class="entry-image" loading="lazy" src="src/content/research/lora-merging/LoRA-merge.png" alt="Visualization"><ul>
-<li><p>Designed Selective Sign Merging and SVD masked gating for LoRA adapters. </p>
-</li>
-<li><p>Benchmarked memorization and copyright compliance using LCS, ROUGE-L, and refusal rates.</p>
-</li>
-<li><p>Up to 13% improvement in unlearning and 4% in relearning over baseline merges, as reported in my resume.</p>
-</li>
+<li>Benchmark LLM memorization and copyright compliance with Hugging Face models, evaluating verbatim reproduction using LCS, ROUGE-L,
+and refusal rates.</li>
+<li>Designed Selective Sign Merging for LoRA adapters, resolving conflicting weight updates by adaptively preserving dominant contributions.</li>
+<li>Extended the method with SVD masked gating, using task-specific activations and local errors to calibrate singular-component corrections.</li>
+<li>Outperformed baseline model merges, on all evaluation metrics, improving unlearning by up to 13% and relearning by up to 4%</li>
 </ul>
 <span class="status">Preparing for submission to ACL 2027</span></div></article>
-                <article class="research-row"><div><p class="meta">Sept. 2025 – Apr. 2026</p><h3>FATHOM</h3><p class="subtitle">Throughput modeling for internet speed tests</p><p class="meta">With Prof. Rocky Chang · Calvin University</p></div><div class="entry-body"><img class="entry-image" loading="lazy" src="src/content/research/fathom/speedtest_scatter.png" alt="Visualization"><p>Analyzed approximately 300,000 rows across 100 speed tests using Linux pipelines, Python, statistical analysis, and clustering for anomaly detection. Investigated measurement bias under varying network conditions.</p>
-<p>Second author on FATHOM: A Framework for Adaptive Throughput Modeling in Browser-Based Speed Tests.</p>
-<p>[View code ↗] (<a href="https://github.com/benKosters/speed-test-analysis">https://github.com/benKosters/speed-test-analysis</a>)</p>
+                <article class="research-row"><div><p class="meta">Sept. 2025 – Apr. 2026</p><h3>FATHOM: A Framework for Adaptive Throughput Modeling For Browser-Based Speed Tests ↗</h3><p class="subtitle">Throughput modeling for internet speed tests</p><p class="meta">With Prof. Rocky Chang · Calvin University</p></div><div class="entry-body"><img class="entry-image" loading="lazy" src="src/content/research/fathom/speedtest_scatter.png" alt="Visualization"><ul>
+<li>Analyzed approximately 300,000 rows of internet speed-test data across 100 tests using Linux shell pipelines and Python-based analytics workflows,
+integrating statistical analysis and machine learning clustering techniques for anomaly detection.</li>
+<li>Evaluated the robustness of internet speed tests using Ookla’s Speedtest® under varying network conditions to identify potential measurement bias
+and improve fairness of performance.</li>
+</ul>
+<p><a href="https://github.com/benKosters/speed-test-analysis">View code ↗</a></p>
 <span class="status">Under review at ACM SIGMETRICS · 2026</span></div></article>
-                <article class="research-row"><div><p class="meta">Jun. 2025 – Mar. 2026</p><h3>When residual ACF misleads</h3><p class="subtitle">Diagnostics for mixed-effects models</p><p class="meta">With Prof. Stacy DeRuiter · Calvin University</p></div><div class="entry-body"><img class="entry-image" loading="lazy" src="src/content/research/residual-acf/residual_graph.png" alt="Visualization"><p>Simulated unexpected negative autocorrelation at small lags in mixed-effects models with few observations per group. Identified the mechanism and proposed interpretation guidelines.</p>
-<p>First author on Using the Residual Autocorrelation Function to Verify Independence (and When It Doesn’t Work).</p>
+                <article class="research-row"><div><p class="meta">Jun. 2025 – Mar. 2026</p><h3>When residual ACF misleads</h3><p class="subtitle">Diagnostics for mixed-effects models</p><p class="meta">With Prof. Stacy DeRuiter · Calvin University</p></div><div class="entry-body"><img class="entry-image" loading="lazy" src="src/content/research/residual-acf/residual_graph.png" alt="Visualization"><ul>
+<li>Simulated unexpected negative autocorrelation at small lags in mixed-effects models with few observations per group. </li>
+<li>Identified the mechanism and proposed interpretation guidelines.</li>
+</ul>
 <span class="status">Accepted to American Christian Mathematical Science (ACMS) Conference Proceedings · 2026</span></div></article>
             </div>
             <p class="source-note">Research outcomes and publication statuses are reported from my supplied resume;
@@ -74,21 +80,29 @@
                 </div>
                 <div class="project-grid">
                     <article class="project-card"><div class="project-top"><span>01</span><span>Computer vision · Jan. – Mar. 2026</span></div><h3>Chest X-ray disease detection</h3><p class="result">10th / 218 teams</p><img class="entry-image" loading="lazy" src="src/content/projects/chest-xray/AMIA.png" alt="Demo"><div class="entry-body"><ul>
-<li>Fine-tuned RT-DETR with an end-to-end NumPy and PyTorch pipeline. </li>
-<li>Used AMP, DDP, early stopping, learning-rate scheduling, threshold tuning, and systematic error analysis.</li>
+<li>Fine-tuned an RT-DETR real-time object detection model for X-ray disease detection</li>
+<li>Developed an end-to-end pipeline using NumPy and PyTorch for data preprocessing, model training, and evaluation; integrated Automatic Mixed
+Precision (AMP) and Distributed Data Parallel (DDP).</li>
+<li>Optimized training strategies, including early stopping, learning rate scheduling, and inference threshold tuning, to improve model performance and
+stability.</li>
+<li>Conducted systematic error analysis on model predictions to inform model iterations.</li>
 </ul>
 <p><a href="src/content/projects/chest-xray/amia-ml-report.ipynb">View Report ↗</a></p>
-</div><p class="placeholder"><strong>To add</strong> Add the competition link, exact evaluation score, repository, and an annotated prediction example.</p></article>
+</div></article>
                     <article class="project-card"><div class="project-top"><span>02</span><span>Multimodal AI</span></div><h3>AI art studio</h3><p class="result">Top-10 NVIDIA hackathon finish</p><img class="entry-image" loading="lazy" src="src/content/projects/ai-art-studio/chat.jpg" alt="Demo"><div class="entry-body"><ul>
-<li>To support Kids&#39;s art workshop, we developed a studio that turns children’s drawings into animations, interactive 3D models, and narrated storybooks. </li>
-<li>Integrated 13 modular AI skills on NVIDIA DGX Spark; reduced checked conversational response latency from 40–80 seconds to 2–8 seconds.</li>
+<li>Co-developed an AI art studio that transforms children’s drawings into animations, interactive 3D models, and narrated storybooks; earned a top-10
+finish.</li>
+<li>Integrates 13 modular AI skills with multimodal models on NVIDIA DGX Spark, incorporating content screening and output-quality checks.</li>
+<li>Evaluated feedback and optimized model inference, reducing checked conversational response latency from 40–80 seconds to 2–8 seconds.</li>
 </ul>
-<p>[View Demo &amp; Functions Overview ↗] (<a href="https://www.bilibili.com/video/BV1eYaL6mE5k/?vd_source=66f51432bde8d6677eb65b775f4cd64f">https://www.bilibili.com/video/BV1eYaL6mE5k/?vd_source=66f51432bde8d6677eb65b775f4cd64f</a>)</p>
-<p>[View Code ↗] (<a href="https://github.com/FelixZhang1020/nvidia-hackathon">https://github.com/FelixZhang1020/nvidia-hackathon</a>)</p>
+<p><a href="https://www.bilibili.com/video/BV1eYaL6mE5k/?vd_source=66f51432bde8d6677eb65b775f4cd64f">View Demo ↗</a></p>
+<p><a href="https://github.com/FelixZhang1020/nvidia-hackathon">View Code ↗</a></p>
 </div></article>
                     <article class="project-card"><div class="project-top"><span>03</span><span>LLM applications · Aug. – Dec. 2025</span></div><h3>Course Advisor Bot</h3><p class="result">Tested with 22 participants</p><img class="entry-image" loading="lazy" src="src/content/projects/course-advisor/course_advisor.png" alt="Demo"><div class="entry-body"><ul>
-<li>Built a multilingual Python chatbot with context tracking and approximately 1-second average prompt latency. </li>
-<li>User testing exposed nonexistent course recommendations; added tool calling with MCP and a queryable course-catalog database.</li>
+<li>Developed a Python chatbot for personalized course recommendations, integrating OpenAI GPT APIs, supporting multi-turn dialogue, context
+tracking, and multilingual interaction with approximately 1s average latency per prompt.</li>
+<li>Led user testing with 22 participants that revealed LLM hallucinations recommending nonexistent courses.</li>
+<li>Implemented LLM tool calling with MCP and scraped the course catalog into a queryable database to address LLM hallucinations.</li>
 </ul>
 <p><a href="https://github.com/Cpril/course_advisor_bot_2">View code ↗</a></p>
 </div></article>
@@ -141,7 +155,7 @@
             </div>
             <div class="timeline">
                 <article><p class="meta">Aug. 2026 – Present</p><div class="entry-body"><h3>Tech Lead</h3><p class="subtitle">Google Developer Groups on Campus</p><p>Plan technical workshops and hands-on activities using Google developer resources for students interested in software development and AI.</p>
-<p class="placeholder"><strong>To add</strong> Add workshop titles, resources, attendance, and participant feedback.</p></div></article>
+</div></article>
                 <article><p class="meta">Dec. 2024 – Present</p><div class="entry-body"><h3>CS Lab Teaching Assistant &amp; Grader</h3><p class="subtitle">Calvin University</p><ul>
 <li>Help students debug Python and understand computing concepts in CS108 and CS106. </li>
 <li>Grade CS212 Data Structures and Algorithms assignments in C# and provide feedback.</li>
@@ -194,8 +208,6 @@
                     </ul>
                     <h4>Research training</h4>
                     <p>Social & Behavioral Research / IRB · October 2024 (from previous portfolio)</p>
-                    <p class="placeholder"><strong>To add</strong> Add a public certificate link and confirm current
-                        validity.</p>
                 </div>
             </div>
         </section>
