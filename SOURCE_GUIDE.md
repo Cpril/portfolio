@@ -9,7 +9,7 @@ src/content/projects/course-advisor/
   course_advisor.png     Picture belonging to this project
 ```
 
-Research lives in `src/content/research/`, experience in `src/content/experience/`, and earlier projects in `src/content/projects/archive/`. The older shared images remain in `assets/` for compatibility with existing reports; the homepage entries use their colocated copies.
+Research lives in `src/content/research/`, experience in `src/content/experience/`, and earlier projects in `src/content/projects/archive/`. Keep each entry’s pictures in its own folder. Shared assets contain only the homepage stylesheet, portrait, and resume.
 
 ## Write descriptions in Markdown
 
