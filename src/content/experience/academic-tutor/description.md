@@ -1,1 +1,1 @@
-Provided psychology tutoring and introductory computer science study sessions.
+Provided tutoring and study sessions for Math, CS, Statistics courses.

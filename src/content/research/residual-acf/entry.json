@@ -4,6 +4,7 @@
   "date": "Jun. 2025 – Mar. 2026",
   "subtitle": "Diagnostics for mixed-effects models",
   "advisor": "With Prof. Stacy DeRuiter · Calvin University",
-  "status": "Accepted to ACMS Conference Proceedings · 2026",
-  "todo": "Add the proceedings link, reproducible simulation code, and a diagnostic example."
+  "status": "Accepted to American Christian Mathematical Science (ACMS) Conference Proceedings · 2026",
+  "image": "residual_graph.png",
+  "imageAlt": "Visualization"
 }

@@ -4,7 +4,6 @@
   "number": "03",
   "category": "LLM applications · Aug. – Dec. 2025",
   "result": "Tested with 22 participants",
-  "todo": "Add a current demo and before/after evaluation of nonexistent course recommendations.",
   "image": "course_advisor.png",
-  "imageAlt": "Preview of Course Advisor Bot"
+  "imageAlt": "Demo"
 }

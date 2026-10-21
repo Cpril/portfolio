@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jiaxin (Priscilla) Chen | Data Science & AI</title>
     <meta name="description"
-        content="Jiaxin (Priscilla) Chen’s portfolio: machine learning, LLM research, statistical modeling, and human-centered AI.">
+        content="Jiaxin (Priscilla) Chen’s portfolio: machine learning, AI Applications, and statistical algorithms.">
     <link rel="stylesheet" href="assets/css/portfolio.css">
 </head>
 
@@ -36,7 +36,7 @@
         <div class="highlights wrap" aria-label="Selected achievements">
             <div><strong>10 / 218</strong><span>Chest X-ray competition rank</span></div>
             <div><strong>13 groups</strong><span>Supported through data consulting</span></div>
-            <div><strong>3.972 / 4.00</strong><span>GPA · with Honors, per resume</span></div>
+            <div><strong>3.97 / 4.00</strong><span>GPA · with Honors</span></div>
         </div>
         <section id="research" class="wrap section">
             <div class="section-heading">
@@ -48,12 +48,13 @@
                 <article class="research-row"><div><p class="meta">May 2026 – Present</p><h3>Conflict-resolved LoRA merging</h3><p class="subtitle">Copyright-aware LLM updates</p><p class="meta">With Prof. Xiangyu Zhao · City University of Hong Kong</p></div><div class="entry-body"><p>Designed Selective Sign Merging and SVD masked gating for LoRA adapters. Benchmarked memorization and copyright compliance using LCS, ROUGE-L, and refusal rates.</p>
 <p>Up to 13% improvement in unlearning and 4% in relearning over baseline merges, as reported in my resume.</p>
 <span class="status">Preparing for submission to ACL 2027</span><p class="placeholder"><strong>To add</strong> Add a public code repository, benchmark setup, baseline definitions, and a research summary.</p></div></article>
-                <article class="research-row"><div><p class="meta">Sept. 2025 – Apr. 2026</p><h3>FATHOM</h3><p class="subtitle">Throughput modeling for internet speed tests</p><p class="meta">With Prof. Rocky Chang · Calvin University</p></div><div class="entry-body"><p>Analyzed approximately 300,000 rows across 100 speed tests using Linux pipelines, Python, statistical analysis, and clustering for anomaly detection. Investigated measurement bias under varying network conditions.</p>
+                <article class="research-row"><div><p class="meta">Sept. 2025 – Apr. 2026</p><h3>FATHOM</h3><p class="subtitle">Throughput modeling for internet speed tests</p><p class="meta">With Prof. Rocky Chang · Calvin University</p></div><div class="entry-body"><img class="entry-image" loading="lazy" src="src/content/research/fathom/speedtest_scatter.png" alt="Visualization"><p>Analyzed approximately 300,000 rows across 100 speed tests using Linux pipelines, Python, statistical analysis, and clustering for anomaly detection. Investigated measurement bias under varying network conditions.</p>
 <p>Second author on FATHOM: A Framework for Adaptive Throughput Modeling in Browser-Based Speed Tests.</p>
-<span class="status">Under review at ACM SIGMETRICS · 2026</span><p class="placeholder"><strong>To add</strong> Add an approved preprint, repository, and a figure explaining the main findings.</p></div></article>
-                <article class="research-row"><div><p class="meta">Jun. 2025 – Mar. 2026</p><h3>When residual ACF misleads</h3><p class="subtitle">Diagnostics for mixed-effects models</p><p class="meta">With Prof. Stacy DeRuiter · Calvin University</p></div><div class="entry-body"><p>Simulated unexpected negative autocorrelation at small lags in mixed-effects models with few observations per group. Identified the mechanism and proposed interpretation guidelines.</p>
+<p>[View code ↗] (<a href="https://github.com/benKosters/speed-test-analysis">https://github.com/benKosters/speed-test-analysis</a>)</p>
+<span class="status">Under review at ACM SIGMETRICS · 2026</span></div></article>
+                <article class="research-row"><div><p class="meta">Jun. 2025 – Mar. 2026</p><h3>When residual ACF misleads</h3><p class="subtitle">Diagnostics for mixed-effects models</p><p class="meta">With Prof. Stacy DeRuiter · Calvin University</p></div><div class="entry-body"><img class="entry-image" loading="lazy" src="src/content/research/residual-acf/residual_graph.png" alt="Visualization"><p>Simulated unexpected negative autocorrelation at small lags in mixed-effects models with few observations per group. Identified the mechanism and proposed interpretation guidelines.</p>
 <p>First author on Using the Residual Autocorrelation Function to Verify Independence (and When It Doesn’t Work).</p>
-<span class="status">Accepted to ACMS Conference Proceedings · 2026</span><p class="placeholder"><strong>To add</strong> Add the proceedings link, reproducible simulation code, and a diagnostic example.</p></div></article>
+<span class="status">Accepted to American Christian Mathematical Science (ACMS) Conference Proceedings · 2026</span></div></article>
             </div>
             <p class="source-note">Research outcomes and publication statuses are reported from my supplied resume;
                 public evidence links are marked where missing.</p>
@@ -66,15 +67,25 @@
                     <p>Applied work in vision, language, and statistical inference.</p>
                 </div>
                 <div class="project-grid">
-                    <article class="project-card"><div class="project-top"><span>01</span><span>Computer vision · Jan. – Mar. 2026</span></div><h3>Chest X-ray disease detection</h3><p class="result">10th / 218 teams</p><div class="entry-body"><p>Fine-tuned RT-DETR with an end-to-end NumPy and PyTorch pipeline. Used AMP, DDP, early stopping, learning-rate scheduling, threshold tuning, and systematic error analysis.</p>
+                    <article class="project-card"><div class="project-top"><span>01</span><span>Computer vision · Jan. – Mar. 2026</span></div><h3>Chest X-ray disease detection</h3><p class="result">10th / 218 teams</p><img class="entry-image" loading="lazy" src="src/content/projects/chest-xray/AMIA.png" alt="Demo"><div class="entry-body"><ul>
+<li>Fine-tuned RT-DETR with an end-to-end NumPy and PyTorch pipeline. </li>
+<li>Used AMP, DDP, early stopping, learning-rate scheduling, threshold tuning, and systematic error analysis.</li>
+</ul>
+<p><a href="src/content/projects/chest-xray/amia-ml-report.ipynb">View Report ↗</a></p>
 </div><p class="placeholder"><strong>To add</strong> Add the competition link, exact evaluation score, repository, and an annotated prediction example.</p></article>
-                    <article class="project-card"><div class="project-top"><span>02</span><span>Multimodal AI</span></div><h3>AI art studio for children</h3><p class="result">Top-10 hackathon finish</p><div class="entry-body"><p>Co-developed a studio that turns children’s drawings into animations, interactive 3D models, and narrated storybooks. Integrated 13 modular AI skills on NVIDIA DGX Spark; reduced checked conversational response latency from 40–80 seconds to 2–8 seconds.</p>
+                    <article class="project-card"><div class="project-top"><span>02</span><span>Multimodal AI</span></div><h3>AI art studio for children</h3><p class="result">Top-10 NVIDIA hackathon finish</p><div class="entry-body"><ul>
+<li>Co-developed a studio that turns children’s drawings into animations, interactive 3D models, and narrated storybooks. </li>
+<li>Integrated 13 modular AI skills on NVIDIA DGX Spark; reduced checked conversational response latency from 40–80 seconds to 2–8 seconds.</li>
+</ul>
 </div><p class="placeholder"><strong>To add</strong> Add the hackathon date, event/results link, team contributions, demo video, and measurement setup.</p></article>
-                    <article class="project-card"><div class="project-top"><span>03</span><span>LLM applications · Aug. – Dec. 2025</span></div><h3>Course Advisor Bot</h3><p class="result">Tested with 22 participants</p><img class="entry-image" loading="lazy" src="src/content/projects/course-advisor/course_advisor.png" alt="Preview of Course Advisor Bot"><div class="entry-body"><p>Built a multilingual Python chatbot with context tracking and approximately 1-second average prompt latency. User testing exposed nonexistent course recommendations; added tool calling with MCP and a queryable course-catalog database.</p>
+                    <article class="project-card"><div class="project-top"><span>03</span><span>LLM applications · Aug. – Dec. 2025</span></div><h3>Course Advisor Bot</h3><p class="result">Tested with 22 participants</p><img class="entry-image" loading="lazy" src="src/content/projects/course-advisor/course_advisor.png" alt="Demo"><div class="entry-body"><ul>
+<li>Built a multilingual Python chatbot with context tracking and approximately 1-second average prompt latency. </li>
+<li>User testing exposed nonexistent course recommendations; added tool calling with MCP and a queryable course-catalog database.</li>
+</ul>
 <p><a href="https://github.com/Cpril/course_advisor_bot_2">View code ↗</a></p>
-</div><p class="placeholder"><strong>To add</strong> Add a current demo and before/after evaluation of nonexistent course recommendations.</p></article>
+</div></article>
                     <article class="project-card"><div class="project-top"><span>04</span><span>Bayesian statistics · Jan. – May 2025</span></div><h3>Modeling the USD/CNY exchange rate</h3><p class="result">MCMC &amp; uncertainty</p><img class="entry-image" loading="lazy" src="src/content/projects/currency-model/Bayes.png" alt="Preview of Modeling the USD/CNY exchange rate"><div class="entry-body"><p>Built a Bayesian model using macroeconomic predictors. Prepared time-series data with imputation, first differences, and standardization; used MCMC and convergence diagnostics to assess fit and uncertainty.</p>
-<p><a href="https://currencyexchangewbayesian.netlify.app/">Explore project ↗</a></p>
+<p><a href="https://currencyexchangewbayesian.netlify.app/">View Report ↗</a></p>
 </div><p class="placeholder"><strong>To add</strong> Add a repository, held-out evaluation, and a concise explanation of the key findings.</p></article>
                 </div>
                 <details class="archive">
@@ -122,9 +133,15 @@
             <div class="timeline">
                 <article><p class="meta">Aug. 2026 – Present</p><div class="entry-body"><h3>Tech Lead</h3><p class="subtitle">Google Developer Groups on Campus</p><p>Plan technical workshops and hands-on activities using Google developer resources for students interested in software development and AI.</p>
 <p class="placeholder"><strong>To add</strong> Add workshop titles, resources, attendance, and participant feedback.</p></div></article>
-                <article><p class="meta">Dec. 2024 – Present</p><div class="entry-body"><h3>CS Lab Teaching Assistant &amp; Grader</h3><p class="subtitle">Calvin University</p><p>Help students debug Python and understand computing concepts in CS108 and CS106. Grade CS212 Data Structures and Algorithms assignments in C# and provide feedback.</p>
+                <article><p class="meta">Dec. 2024 – Present</p><div class="entry-body"><h3>CS Lab Teaching Assistant &amp; Grader</h3><p class="subtitle">Calvin University</p><ul>
+<li>Help students debug Python and understand computing concepts in CS108 and CS106. </li>
+<li>Grade CS212 Data Structures and Algorithms assignments in C# and provide feedback.</li>
+</ul>
 </div></article>
-                <article><p class="meta">Jun. – Aug. 2025</p><div class="entry-body"><h3>Data Consulting Hub Research Assistant</h3><p class="subtitle">Calvin University · Prof. Stacy DeRuiter</p><p>Supported 13 research groups across STEM and social sciences, including HIV laboratory experiments and informal-caregiver surveys. Contributed data cleaning, modeling, visualization, reports, and presentations.</p>
+                <article><p class="meta">Jun. – Aug. 2025</p><div class="entry-body"><h3>Data Consulting Hub Research Assistant</h3><p class="subtitle">Calvin University · Prof. Stacy DeRuiter</p><ul>
+<li>Supported 13 research groups across STEM and social sciences, including HIV laboratory experiments and informal-caregiver surveys. </li>
+<li>Contributed data cleaning, modeling, visualization, reports, and presentations.</li>
+</ul>
 <p><a href="projects/data_consulting_hub_poster.pdf">View research poster ↗</a></p>
 </div></article>
             </div>
@@ -133,7 +150,7 @@
                 <div class="timeline">
 <article><p class="meta">Sept. 2023 – May 2025</p><div class="entry-body"><h3>Biology and Chemistry Office Assistant</h3><p class="subtitle">Calvin University</p><p>Supported faculty and students with data organization, events, and communications.</p>
 </div></article>
-<article><p class="meta">Dec. 2024 – May 2025</p><div class="entry-body"><h3>Academic Tutor</h3><p class="subtitle">Calvin University</p><p>Provided psychology tutoring and introductory computer science study sessions.</p>
+<article><p class="meta">Dec. 2024 – May 2025</p><div class="entry-body"><h3>Academic Tutor</h3><p class="subtitle">Calvin University</p><p>Provided tutoring and study sessions for Math, CS, Statistics courses.</p>
 </div></article>
 </div>
                 <p class="source-note">Earlier roles retained from the previous portfolio.</p>
